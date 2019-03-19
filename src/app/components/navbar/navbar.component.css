@@ -1,0 +1,28 @@
+nav{
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: black;
+}
+
+.navbar a:hover{
+  border-bottom: solid white 1px;
+}
+
+.navbar-brand{
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 20px;
+  color: rgb(215, 210, 210);
+}
+
+li.nav-item.active{
+    color: rgb(215, 210, 210);
+}
+
+.navbar-light, .navbar-nav, .nav-link{
+    color: rgb(215, 210, 210);
+}
+
+.nav-item{
+	font-size: 20px;
+}

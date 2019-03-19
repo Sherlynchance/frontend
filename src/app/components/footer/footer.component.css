@@ -1,0 +1,31 @@
+body{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+#contact{
+	background-color: black;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.row{
+	color: rgb(215, 210, 210);
+}
+
+h2 {
+	font-family: 'Lobster', Georgia, Times, serif;
+	text-align: right;
+    color: rgb(215, 210, 210);
+}
+
+
+h3 {
+	font-size: 30px;
+}
+
+.container{
+	font-weight: 700;
+}
+

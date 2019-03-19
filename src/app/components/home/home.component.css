@@ -1,0 +1,142 @@
+.gg{
+  margin-top: 2px;
+
+}
+.carousel-item{
+  width:100%!important;
+	height:500px!important;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+
+}
+.card{
+  margin-top: 15px;
+  margin-bottom: 12px;
+  border: 3px solid black;
+}
+.service{
+  background-color: lightblue
+}
+#check {
+	margin-top: 50px;
+}
+.input-type-demo {
+	margin-top: 45px;
+	text-align: center;
+}
+.heading {
+	background-color: #25274d;
+	color: white;
+	text-align: center;
+	border-radius: 50px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#carousel-example-generic {
+    position:relative;
+}
+
+div.form-group {
+	background: rgb(0,0,0,0.7);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position:absolute;
+    z-index:9999999;
+    top: 370px; 
+    left:500px; 
+    right:auto; 
+    bottom:auto;
+}
+
+
+.carousel-subtitle{
+	position: absolute;
+	bottom: 50%;
+  left: 20%;
+  z-index: 20;
+  color: white;
+	/* background-color: rgba(0, 0, 0, 0.19); */
+}
+
+.carousel-subtitle h1{
+	font-weight: bolder;
+	background-color: rgb(255, 255, 255, 0.6);
+	font-size: 60px;
+	color: black;
+	padding: 10px;
+	border-radius: 5px;
+}
+.carousel-subtitle h3{
+	font-size: 30px;
+	color: white;
+	background-color: rgb(0,0,0,0.6)
+}
+
+
+
+img.item {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+
+/*fefe*/
+
+.masonry{
+	column-gap: 1em;
+	column-count: 4;
+}
+
+.item{
+	display: inline-block;
+	width: 50%;
+}
+
+.text-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Recommended Locations*/
+.grid, .grid-left, .grid-right, .grid-stack {
+	display: flex;
+	width: 100%;
+}
+.grid {
+	flex-wrap: wrap;
+}
+.grid-stack {
+	flex-flow: column;
+}
+.grid-item {
+	width: 100%;
+	height: 50px;
+}
+.grid-left > .grid-item {
+	height: 100px;
+}
+img .jkt{
+	background-image: url(/assets/img/jkt.jpg);
+}
+
+.grid-right {
+	flex-flow: row-reverse;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
