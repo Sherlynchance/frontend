@@ -1,0 +1,37 @@
+<div class="table_details">  
+
+    <div class="tables container">
+      <span class="title_table">REVIEWS</span>
+      <span class="search_table" ><form action="#">
+        
+        <input type="search" placeholder="Search"></form></span>
+    </div>
+  <div class="container-fluid">
+      <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Hotel ID</th>
+              <th>User ID</th>
+              <th>Comment</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let review of reviews">
+                  <td>{{review.id}} </td>
+                  <td>{{review.hotel_id}}</td>
+                  <td>{{review.user_id}}</td>
+                  <td>{{review.comment}}</td>
+                  <td>{{review.rating}}</td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-success">Update</button>
+                      <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+  </div>
+  </div>

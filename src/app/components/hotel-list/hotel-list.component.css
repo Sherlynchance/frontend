@@ -1,0 +1,41 @@
+body{
+    margin-top: 80px;
+    height: 100vh;
+}
+
+h3{
+    color: white;
+}
+
+.row{
+    margin-left: 20px;
+}
+
+.Hotel-filters {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 1px;
+    padding: 15px 0;
+    margin-left: 20px;
+}
+
+.Hotel-filters p {
+    border-bottom: 1px solid #EEE;
+    padding: 0 0 5px 0;
+    color: white;
+}
+
+.Hotel-filters ul{
+    margin: 0;
+    padding: 0;
+    color: white;  
+}
+
+section {
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.card{
+    border-color: black;
+    background-color:grey;
+}

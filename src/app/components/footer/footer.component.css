@@ -2,6 +2,8 @@ body{
 	position: relative;
 	bottom: 0;
 	width: 100%;
+	padding-top: 100px;
+	
 }
 
 #contact{
@@ -27,5 +29,10 @@ h3 {
 
 .container{
 	font-weight: 700;
+}
+
+h6 {
+	padding-left: 45px;
+	text-align: right;
 }
 

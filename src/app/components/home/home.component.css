@@ -62,6 +62,10 @@ div.form-group {
 	/* background-color: rgba(0, 0, 0, 0.19); */
 }
 
+.searchbox{
+	padding: 20px;
+}
+
 .carousel-subtitle h1{
 	font-weight: bolder;
 	background-color: rgb(255, 255, 255, 0.6);

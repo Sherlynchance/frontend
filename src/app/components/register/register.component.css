@@ -1,25 +1,29 @@
 body {
-    margin: 0;
-    padding: 0;
-    /*background-color: #17a2b8;*/
-    height: 200vh;
-  }
-  
-  .text-info{
-    color: black;
-  }
-  
-  #register .container #register-row #register-column #register-box {
-    margin-top: 50px;
-    max-width: 600px;
-    height: 700px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-    color: black;
-  }
-  #register .container #register-row #register-column #register-box #register-form {
-    padding: 20px;
-  }
-  #register .container #register-row #register-column #register-box #register-form #register-link {
-    margin-top: -85px;
-  }
+  margin: 0;
+  padding: 0;
+  /*background-color: #17a2b8;*/
+  height: 150vh;
+  background-image: url(/assets/img/jkt.jpg);
+}
+
+.text-info{
+  color: black;
+}
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 150px;
+  max-width: 600px;
+  height: 600 px;
+  border: 2px solid #9C9C9C;
+  /*background-color: #EAEAEA;*/
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}

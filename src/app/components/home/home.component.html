@@ -1,31 +1,23 @@
-<!-- Carousel -->
 <div id="carouselExampleIndicators" class="carousel slide gg" data-ride="carousel">
-  <div class="form-group">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <!-- <input type="text" class="form-control" id="search" input-lg" placeholder="Select Location"> -->
-          
-
-         
-        </div>
-        <!-- <div class="col-md-3">
-              <input type="date" class="form-control input-lg" name="start" placeholder="Check In">   
-          </div>
-          <div class="col-md-3">
-              <input type="date" class="form-control input-lg" name="end" placeholder="Check Out">            
-          </div> -->
-        <div class="col-md-5">
-          <button type="button" class="btn btn-primary">Check Now</button>
+ 
+  <form [formGroup]="searchForm" (submit)="onSubmit()">
+      <div class="form-group">
+        <div class="input-group searchbox">
+          <input type="text" formControlName="searchLocation" placeholder="Search Location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.searchLocation.errors }" />
+          <div *ngIf="submitted && f.searchLocation.errors" class="invalid-feedback"></div>
+          <div class="input-group-append" id="button-addon4">
+          <button class="btn btn-primary" type="submit">Search</button>
         </div>
       </div>
     </div>
-  </div>
+  </form> 
+    
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
+
   <div class="carousel-inner">
     <div class="carousel-item active" align="center">
       <img src="../../../assets/img/carousel-2.jpg"

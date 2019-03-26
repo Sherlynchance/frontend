@@ -6,10 +6,17 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
+import { ContactComponent } from './contact/contact.component';
 
 import { HomeRoutingModule } from './home.routes';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeTemplateComponent } from './home.template';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -18,12 +25,18 @@ import { HomeTemplateComponent } from './home.template';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeTemplateComponent
+    HomeTemplateComponent,
+    ContactComponent,
+    HotelListComponent,
+    HotelDetailsComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     FormsModule,
-    HomeRoutingModule
+    RouterModule,
+    HttpClientModule,
+    HomeRoutingModule,
   ]
 })
 export class HomeModule { }

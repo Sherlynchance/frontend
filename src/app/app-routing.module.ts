@@ -11,15 +11,15 @@ const routes: Routes = [
     loadChildren: './components/home.module#HomeModule'
   },
 
-   {
-     path: 'admin',
-     loadChildren: './admin/admin.module#AdminModule'
-   },
-   {
-     path: '',
-     redirectTo: 'home',
-     pathMatch: 'full'
-   }
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }
 
 //    { 
 //     path: 'home', 

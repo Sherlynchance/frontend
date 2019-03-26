@@ -1,0 +1,82 @@
+#page4 {
+    padding:10px 0 15px 30px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+.main {
+	margin:0 auto;
+	width:960px;
+	padding:0 6px
+}
+
+.box {
+	background:#12110f;
+	box-shadow:0 0 6px #000;
+	-moz-box-shadow:0 0 6px #000;
+	-webkit-box-shadow:0 0 6px #000;
+	position:relative
+}
+
+.wrapper {
+	width:100%;
+	overflow:hidden
+}
+
+#content{}
+
+.box1 {
+	background:#fff;
+	padding:10px
+}
+
+.col2 {
+	width:570px;
+}
+
+.col3 {
+	width:240px;
+}
+
+.pad {
+	padding:20px 0 39px 40px
+}
+
+.pad_bot3 {
+	padding-bottom:14px
+}
+
+.pad_bot1 {
+	padding-bottom:10px
+}
+
+.list2 {
+	border-top:1px solid #f2f2f2;
+	margin-top:-2px;
+	padding-bottom:21px
+}
+.list2 li {
+	line-height:23px;
+	border-bottom:1px solid #f2f2f2;
+	padding:0 6px;
+	color:#000
+}
+.list2 span {
+	float:right
+}
+
+
+.list1 li {
+	line-height:24px
+}
+.list1 a {
+	color:#f3b21d;
+	padding-left:15px;
+	background:url("../../../assets/img/sampleroom.jpg") 0 5px no-repeat
+}
+
+
+body{
+    margin-top: 80px;
+    height: 100vh;
+}

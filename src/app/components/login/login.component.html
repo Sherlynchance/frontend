@@ -1,29 +1,59 @@
 <body>
     <div id="login">
-        <!-- <h3 class="text-center text-white pt-5">Login form</h3> -->
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <!-- form -->
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center">Login</h3>
-                            <div class="form-group">
-                                <label for="username">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">User</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">Admin</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <form id="login-form" class="form" [formGroup]="loginForm" (submit)="onSubmit()">
+                                    <h3 class="text-center">User</h3>
+                                    <div class="form-group">
+                                        <label for="username">Email:</label><br>
+                                        <input type="text" name="username" id="username" class="form-control" formControlName="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label><br>
+                                        <input type="text" name="password" id="password" class="form-control" formControlName="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="remember-me"><span>Remember me</span> <span><input id="remember-me"
+                                        name="remember-me" type="checkbox"></span></label><br>
+                                        <input type="submit" name="submit" class="btn btn-info btn-md" value="SUBMIT">
+                                    </div>
+
+                                    <div id="register-link" class="text-right">
+                                        <a routerLink="/register" class="text-info">Register here</a>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="password">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <form id="login-form" class="form" action="" method="post">
+                                    <h3 class="text-center">Admin</h3>
+                                    <div class="form-group">
+                                        <label for="username">Username:</label><br>
+                                        <input type="text" name="username" id="username" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label><br>
+                                        <input type="text" name="password" id="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" routerLink="/admin" name="submit" class="btn btn-info btn-md" value="SUBMIT">
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="remember-me"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="SUBMIT">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a routerLink="/register" class="text-info">Register here</a>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,103 @@
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 py-3">
+        <!-- <form action="" accept-charset="UTF-8" method="GET">
+          <div class="input-group">
+            <input type="text" name="search" id="search" value="" placeholder="Search Location" class="form-control">
+            <span class="input-group-btn">
+              <input type="button" name="commit" value="Search" class="btn btn-primary">
+            </span>
+          </div>
+        </form> -->
+        <form [formGroup]="searchForm" (submit)="onSubmit()">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="search" name="search" formControlName="searchLocation" placeholder="Search Location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.searchLocation.errors }" />
+                <div *ngIf="submitted && f.searchLocation.errors" class="invalid-feedback"></div>
+                <span class="input-group-btn">
+                    <input type="button" name="commit" value="Search" class="btn btn-primary">
+                  </span>
+              </div>
+          </div>
+        </form> 
+      </div>
+    </div>
+  </div>
+
+  <div class="row py-4">
+  
+      <div class="container-fluid" >
+        <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-3 sidebar-offcanvas side-book" style="background-color: black; padding: 30px;">
+            
+            <div class="rowsl">
+              <h3>Filter by</h3>
+            </div>
+    
+            <div class="Hotel-filters">
+              <p>Star Rating</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          
+            <div class="Hotel-filters">
+              <p>Prices</p>
+              <!-- <p>Accomodation Type</p>
+              <ul>
+                <li><a href="">All</a></li>
+                  <li><a href="">Resort Islands</a></li>
+                  <li><a href="">City Hotels</a></li>
+                  <li><a href="">Liveaboards</a></li>
+                  <li><a href="">Honeymoon</a></li>
+                  <li><a href="">Family</a></li>
+                  <li><a href="">Relax</a></li>
+              </ul> -->
+            </div>   
+
+            <div class="Hotel-filters">
+              <p>Facilities</p>
+            </div>
+          </div> 
+    
+       
+            
+        <div class="col-sm-9" style="padding-right: 30px;">
+          <section>
+            <div class="card">
+              <div class="row py-4" *ngFor="let Hotel of Hotels">
+    
+                <div class="col-md-4">
+                  <!-- <img src="public/image/public/uploads/pictures/{{Hotel.hotel_image}}" class="w-100"> -->
+                  <!-- <img [src] = 'public/image/public/uploads/pictures/${Hotel.hotel_image}'> -->
+                  <!-- <img src="{{Hotel.hotel_image}}"> -->
+                  <img src="http://localhost:8000/{{Hotel.hotel_image}}" class="w-100">
+                </div>
+    
+                <div class="col-md-8 px-3">
+                  <div class="card-block px-3" >
+                    <h4 class="card-title">{{Hotel.hotel_name}}</h4>
+                    <p class="card-text">{{Hotel.hotel_phoneno}}</p>
+                    <p class="card-text">{{Hotel.hotel_city}}, {{Hotel.hotel_address}}</p>
+                    <p>Facilities</p>
+                    <!-- <h4 class="card-text">{{Hotel.}}</h4> -->
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+                
+    
+    
+              </div>
+            </div>
+          </section>
+    
+    </div>
+    </div>  
+    </div>
+    </div>
+
+</body>
