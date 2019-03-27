@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
-
 import { AuthenticationService } from '../../_services';
+import { AlertService } from 'src/app/_services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -15,14 +14,15 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
-    error = '';
+    // error = '';
 
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService
-    ) {
+        private authenticationService: AuthenticationService,
+        private alertService: AlertService) {
+
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
             window.alert("You are already logged in!") 
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
                 this.router.navigate([this.returnUrl]);
             },
             error => {
-                this.error = error;
+                this.alertService.error(error);
                 this.loading = false;
             });
     }

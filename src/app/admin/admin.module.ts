@@ -13,6 +13,11 @@ import { HotelService } from '../_services/hotel.service';
 import { AlertService } from '../_services/alert.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RoomsComponent } from './rooms/rooms.component';
+import { RoomService } from '../_services/room.service';
+import { ReviewService } from '../_services/review.service';
+import { RoomTypesComponent } from './room-types/room-types.component';
+import { FacilitiesComponent } from './facilities/facilities.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsersComponent, 
     ReviewsComponent, 
     HotelsComponent, 
-    NavbarComponent],
+    NavbarComponent, RoomsComponent, RoomTypesComponent, FacilitiesComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -29,6 +34,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [UserService, HotelService, AlertService]
+  providers: [UserService, HotelService, RoomService, ReviewService, AlertService]
 })
 export class AdminModule { }

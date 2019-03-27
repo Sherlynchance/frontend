@@ -25,33 +25,86 @@
   </div>
 </div> -->
 <body>
-<div class="row">
-  <div class="col-sm-12" style="padding-right: 30px;">
-    <section>
-      <div class="card">
-        <div class="row py-4">
-  
-          <div class="col-md-4">
-                <!-- <img src="public/image/public/uploads/pictures/{{Hotel.hotel_image}}" class="w-100"> -->
-                <!-- <img [src] = 'public/image/public/uploads/pictures/${Hotel.hotel_image}'> -->
-                <!-- <img src="{{Hotel.hotel_image}}"> -->
-            <img src="../../../assets/img/semarang.jpg" class="w-100">
-          </div>
-  
-          <div class="col-md-8 px-3">
-            <div class="card-block px-3" >
-              <h4 class="card-title">uggu</h4>
-              <p class="card-text">hiih</p>
-              <p class="card-text">fiyfy</p>
-              <p>Facilities</p>
-              <!-- <h4 class="card-text">{{Hotel.}}</h4> -->
-              <a href="#" class="btn btn-primary">Read More</a>
+
+  <div class="row">
+    <div class="col-sm-12" style="padding-right: 30px;">
+      <section>
+        <div class="card">
+          <div class="row py-4">
+            <div class="col-md-4">
+              <!-- <img src="public/image/public/uploads/pictures/{{Hotel.hotel_image}}" class="w-100"> -->
+              <!-- <img [src] = 'public/image/public/uploads/pictures/${Hotel.hotel_image}'> -->
+              <!-- <img src="{{Hotel.hotel_image}}"> -->
+              <img src="{{Hotels.image}}" class="w-100">
+            </div>
+            <div class="col-md-8 px-3">
+              <div class="card-block px-3">
+                <h4 class="card-title">{{Hotels.hotel_name}}</h4>
+                <p class="card-text">{{Hotels.hotel_phoneno}}</p>
+                <p class="card-text">{{Hotels.hotel_city}}, {{Hotels.hotel_address}}</p>
+                <p class="card-text">{{Hotels.hotel_ratings}} Star</p>
+                <p>Facilities</p>
+                <!-- <h4 class="card-text">{{Hotel.}}</h4> -->
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; margin-left: 40px;margin-right: 40px; margin-top: 40px;display:inline-block" *ngFor="let room of Hotels.rooms">
+      <img class="card-img-top" src="http://localhost:8000/{{room.room_image}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ room.type.room_name }}
+        </h5>
+        <p class="card-text">
+          {{ room.room_description }}
+        </p>
+        <label>{{ room.type.room_price | currency:'IDR.  ' }}</label>
+      </div>
+    </div>
+
+</body>
+
+
+
+
+
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<div class="container">
+	<div class="row">
+		<h3>Leave Review</h3>
+	</div>
+    
+
   
+  
+  
+    
+  <div class="row">
+    <div class="col-md-6">
+      <div class="widget-area no-padding blank">
+        <div class="status-upload">
+            <form [formGroup]="reviewForm" (submit)="onSubmit()" class="form">
+              <div class="form-group">
+                <textarea placeholder="Leave a comment right here" formControlName="comment" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.user_first_name.errors }"></textarea>
+              </div>
+              <div class="form-group">
+                  <select name="rating" id="rating" formControlName="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+              </div>
+            <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Leave Review</button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
   </div>
+  
 </div>
-</body>

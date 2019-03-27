@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
+import { AuthGuard } from '../_guards';
 
 
 const routes: Routes = [
@@ -36,12 +37,14 @@ const routes: Routes = [
     
     {
       path:'hotel-list',
-      component: HotelListComponent
+      component: HotelListComponent,
+      canActivate: [AuthGuard]
     },
 
     {
-      path:'hotel-details',
-      component: HotelDetailsComponent
+      path:'hotel-details/:id',
+      component: HotelDetailsComponent,
+      canActivate: [AuthGuard]
     }
     ]
   }

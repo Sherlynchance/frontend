@@ -30,7 +30,7 @@ export class HotelService {
     }
     
     updateHotel(hotels: Hotels){
-        return this.http.put<Hotels>('https://localhost:8000/api/hotel', hotels);
+        return this.http.put<Hotels>(`http://localhost:8000/api/hotel/${hotels.id}`, hotels);
     }
 
     deleteHotel(id: number){

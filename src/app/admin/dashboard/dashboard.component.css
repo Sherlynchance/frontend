@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,8 +10,6 @@
  body{
   background-color: #ddd  ;
   height: 100vh;
-
-  ;
 }
 
 .topnav {
@@ -21,7 +20,6 @@
     /* background-color: #00acc0; */
     background-color: black;
     z-index:25;
-    
     box-shadow: 0 0 5px #777;
 }
 
@@ -57,9 +55,6 @@
     
 }
 
-.fa-ellipsis-v:focus{
-    color: #555;
-}
 
 /* Style the search box inside the navigation bar */
 
@@ -256,12 +251,6 @@
     color: #22909e
 }
 
-.fa-chevron-right{
-    color: #555;
-    float: right;
-    padding-left: 30px;
-    padding-top: 2px;
-}
 
 .container{
     position: relative;
@@ -309,40 +298,8 @@
     color: #555;
 }
 
-.title_flex{
-    background-color: #3cbbcc;
-    padding:2px 5px;
-    text-transform: lowercase;
-    color: #fff;
-    border-radius: 3px;
-    float: right;
-    font-size: 10px;
-}
 
-.infos> ul >.sales_money{
-    font-size: 20px;
-}
 
-.infos> ul >.sales_money > span{
-    font-size: 12px;
-    text-transform: capitalize;
-    padding-left: 5px;
-}
-
-.sales_money_rate{
-    
-    padding: 2px 5px;
-    color: rgb(25, 170, 61);
-}
-
-.infos> ul > li > i{
-    float:right;
-}
-
-.infos> ul > li > i:hover{
-    cursor: pointer;
-    
-}
 
 .invoice_details{
     background-color: #fff;
@@ -418,116 +375,6 @@ td{
     font-weight: 600;
     font-size: 12px;
 }
-.fa-spinner{
-    color: #229e33;
-}
-
-canvas{
-    position: absolute;  
-    bottom: 0;
-
-}
-
-/* Right Menu bar */
-.right_sidebar{
-    display: block;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index:1 ;
-    height: 100%;
-    width: 220px;
-    overflow: auto;
-    background: rgb(206, 206, 206);
-    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.05);
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.messages{
-    position: relative;
-    top: 50px;
-    padding-top: 15px;
-    display: block;
-    height: 150px;
-    
-}
-
-.msg_title{
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;    
-    color: #555;
-    padding: 20px;
-}
-
-.messages_list{
-    padding: 20px;
-    font-size: 12px;
-}
-.messages_img{
-    float: left;
-}
-.messages_user{
-    font-weight: 900;
-    padding: 2px 10px 2.5px 10px;
-    float: left;
-}
-
-.messages_time{
-    padding: 2.5px 10px 0 10px ;
-    float:left;
-}
-
-
-
-
-#notifs{
-    display: none;
-    position: fixed;
-    top: 50px;
-    right: 0;
-    width: 250px;
-    font-size: 12px;
-    z-index: 999;
-    background-color: rgb(240, 240, 240);
-    color: rgb(36, 36, 36);
-    text-align: left;
-    list-style: none;
-    margin-right: 3%;
-    animation-duration: 0.5s;
-    
-}
-
-#notifs li{
-    padding:10px 0 10px 10px;
-    list-style: none;
-   
-}
-#notifs li:hover{
-    background-color: #999;
-    color: #fff;
-    cursor: pointer;
-}
-.notif_list:nth-child(odd){
-    border-left:3px solid  #1c18fc;   
- }
-.notif_list:nth-child(even){
-    border-left:3px solid  #188efc;   
- }
-
- #more_notifs{
-     clear: both;
-     background-color: rgb(240, 240, 240);
-     font-size: 10px;
-     text-align: center;
-     border: none;
-     padding: 15px 0px;
-     cursor: pointer;
- }
- #more_notifs:hover{
-     background-color:  rgb(157, 171, 255);
- }
 
  @media screen and (max-width: 768px) {
     

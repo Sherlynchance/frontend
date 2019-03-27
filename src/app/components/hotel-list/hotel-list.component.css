@@ -37,5 +37,6 @@ section {
 
 .card{
     border-color: black;
+    /* background-color: rgb(240,96,204); */
     background-color:grey;
 }

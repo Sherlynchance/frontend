@@ -23,7 +23,8 @@ export class UsersComponent implements OnInit {
   deleteUser(id){
     this.userService.deleteUser(id)
       .subscribe((users) => {
-        console.log("Hotel deleted, ", users);
+        console.log("User deleted, ", users);
+        window.alert("User Deleted")
       })
   }
 

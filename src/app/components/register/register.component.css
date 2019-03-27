@@ -2,8 +2,9 @@ body {
   margin: 0;
   padding: 0;
   /*background-color: #17a2b8;*/
-  height: 150vh;
+  height: 160vh;
   background-image: url(/assets/img/jkt.jpg);
+  background-size: cover;
 }
 
 .text-info{
