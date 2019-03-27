@@ -20,7 +20,7 @@ const httpOptions = {
 export class SearchhotelService {
 
   constructor(private http: HttpClient) { }
-  // private url = 'http://localhost:8000/api/';
+  // private url = 'http://api.jsnhotels.com/api/';
   
   // getAvailable(formData): Observable<SearchHotel[]> {
   //   return this.http.post<SearchHotel[]>(this.url, formData, httpOptions ).map(res => {
@@ -28,7 +28,7 @@ export class SearchhotelService {
   //     return res;
   //   });
   getAvailable(searchhotel: SearchHotel){
-    return this.http.post<any[]>('http://localhost:8000/api/hotel/search', searchhotel);
+    return this.http.post<any[]>('http://api.jsnhotels.com/api/hotel/search', searchhotel);
   }
 
 }
