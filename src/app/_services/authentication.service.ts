@@ -20,7 +20,7 @@ export class AuthenticationService {
     }
 
     login(email: string, password: string) {
-        return this.http.post<any>(`http://api.jsnhotels.com/api/auth/login`, { email, password })
+        return this.http.post<any>(`https://api.jsnhotels.com/api/auth/login`, { email, password })
             .pipe(map(user => {
                 
                 if (user && user.access_token) {

@@ -12,11 +12,11 @@ export class HotelService {
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<Hotels[]> {
-        return this.http.get<Hotels[]>(`http://api.jsnhotels.com/api/hotel/`);
+        return this.http.get<Hotels[]>(`https://api.jsnhotels.com/api/hotel/`);
     }
 
     getById(id: number) {
-        return this.http.get<Hotels>(`http://api.jsnhotels.com/api/hotel/${id}`);
+        return this.http.get<Hotels>(`https://api.jsnhotels.com/api/hotel/${id}`);
     }
 
     createHotel(hotels: Hotels, files: any){
@@ -26,18 +26,18 @@ export class HotelService {
         }
         formData.append('hotel_image', files);
 
-        return this.http.post(`http://api.jsnhotels.com/api/hotel`, formData);
+        return this.http.post(`https://api.jsnhotels.com/api/hotel`, formData);
     }
     
     updateHotel(hotels: Hotels){
-        return this.http.put<Hotels>(`http://api.jsnhotels.com/api/hotel/${hotels.id}`, hotels);
+        return this.http.put<Hotels>(`https://api.jsnhotels.com/api/hotel/${hotels.id}`, hotels);
     }
 
     deleteHotel(id: number){
-        return this.http.delete<Hotels>(`http://api.jsnhotels.com/api/hotel/${id}`)
+        return this.http.delete<Hotels>(`https://api.jsnhotels.com/api/hotel/${id}`)
     }
 
     // getByName(name: string){
-    //     return this.http.get<Hotels>(`http://api.jsnhotels.com/user/${name}`);
+    //     return this.http.get<Hotels>(`https://api.jsnhotels.com/user/${name}`);
     // }
 }

@@ -10,11 +10,11 @@ export class RoomService {
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<Rooms[]> {
-        return this.http.get<Rooms[]>(`http://api.jsnhotels.com/api/room/`);
+        return this.http.get<Rooms[]>(`https://api.jsnhotels.com/api/room/`);
     }
 
     // getById(id: number) {
-    //     return this.http.get<Hotels>(`http://api.jsnhotels.com/api/hotel/${id}`);
+    //     return this.http.get<Hotels>(`https://api.jsnhotels.com/api/hotel/${id}`);
     // }
 
     // createHotel(hotels: Hotels, files: any){
@@ -24,7 +24,7 @@ export class RoomService {
     //     }
     //     formData.append('hotel_image', files);
 
-    //     return this.http.post(`http://api.jsnhotels.com/api/hotel`, formData);
+    //     return this.http.post(`https://api.jsnhotels.com/api/hotel`, formData);
     // }
     
     // updateHotel(hotels: Hotels){
@@ -32,10 +32,10 @@ export class RoomService {
     // }
 
     deleteRoom(id: number){
-        return this.http.delete<Rooms>(`http://api.jsnhotels.com/api/room/${id}`)
+        return this.http.delete<Rooms>(`https://api.jsnhotels.com/api/room/${id}`)
     }
 
     // getByName(name: string){
-    //     return this.http.get<Hotels>(`http://api.jsnhotels.com/user/${name}`);
+    //     return this.http.get<Hotels>(`https://api.jsnhotels.com/user/${name}`);
     // }
 }

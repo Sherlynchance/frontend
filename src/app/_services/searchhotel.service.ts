@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import 'rxjs/add/operator/map';
 
 import { SearchHotel } from '../_models/searchhotel';
 
@@ -19,7 +18,7 @@ const httpOptions = {
 export class SearchhotelService {
 
   constructor(private http: HttpClient) { }
-  // private url = 'http://api.jsnhotels.com/api/';
+  // private url = 'https://api.jsnhotels.com/api/';
   
   // getAvailable(formData): Observable<SearchHotel[]> {
   //   return this.http.post<SearchHotel[]>(this.url, formData, httpOptions ).map(res => {
@@ -27,7 +26,7 @@ export class SearchhotelService {
   //     return res;
   //   });
   getAvailable(searchhotel: SearchHotel){
-    return this.http.post<any[]>('http://api.jsnhotels.com/api/hotel/search', searchhotel);
+    return this.http.post<any[]>('https://api.jsnhotels.com/api/hotel/search', searchhotel);
   }
 
 }
