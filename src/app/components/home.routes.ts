@@ -10,7 +10,6 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { AuthGuard } from '../_guards';
 
-
 const routes: Routes = [
     {
       path: '',
@@ -38,13 +37,13 @@ const routes: Routes = [
     {
       path:'hotel-list',
       component: HotelListComponent,
-      canActivate: [AuthGuard]
+      // canActivate: [AuthGuard]
     },
 
     {
       path:'hotel-details/:id',
       component: HotelDetailsComponent,
-      canActivate: [AuthGuard]
+      // canActivate: [AuthGuard]
     }
     ]
   }

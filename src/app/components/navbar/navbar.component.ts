@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/_models';
+import { User, Role } from 'src/app/_models';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/_services';
 
@@ -25,6 +25,11 @@ export class NavbarComponent implements OnInit {
     window.alert("Successfully logged out");
     this.authenticationService.logout();
     this.router.navigate(['/home']);
+  }
+
+  get isAdmin(){
+    return this.currentUser && this.currentUser.user_roles == Role.Admin;
+
   }
 
   ngOnInit() {

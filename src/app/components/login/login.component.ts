@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../../_services';
 import { AlertService } from 'src/app/_services/alert.service';
+import { User, Role } from 'src/app/_models';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +15,11 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
-    // error = '';
+
+    currentUser: User;
 
     constructor(
-        private formBuilder: FormBuilder,
+        private formBuilder: FormBuilder, // defines the form controls and validators, and is used to access data entered into the form
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
@@ -61,4 +63,9 @@ export class LoginComponent implements OnInit {
                 this.loading = false;
             });
     }
+
+    // get isAdmin(){
+    //     return this.currentUser && this.currentUser.user_roles == Role.Admin;
+    
+    //   }
 }

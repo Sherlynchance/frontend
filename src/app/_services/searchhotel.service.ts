@@ -15,6 +15,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class SearchhotelService {
 
   constructor(private http: HttpClient) { }

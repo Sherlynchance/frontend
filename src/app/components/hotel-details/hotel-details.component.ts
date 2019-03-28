@@ -8,6 +8,8 @@ import { ReviewService } from 'src/app/_services/review.service';
 import { pipe } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { AlertService } from 'src/app/_services/alert.service';
+import { AuthGuard } from '../../_guards/auth.guard';
+import { CanActivate } from '@angular/router/src/utils/preactivation';
 
 @Component({
   selector: 'app-hotel-details',
@@ -23,7 +25,6 @@ export class HotelDetailsComponent implements OnInit {
 
   public Hotels: any;
   public Rooms: Rooms[];
-  
 
 
   constructor(
@@ -72,6 +73,11 @@ export class HotelDetailsComponent implements OnInit {
             this.loading = false;
         });
 }
+
+  // showHide(){
+  //   CanActivate:[AuthGuard]
+    
+  // }
     
   }
 

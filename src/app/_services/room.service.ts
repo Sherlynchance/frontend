@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs'
-
-
 import { Rooms } from '../_models/rooms';
 
 @Injectable({ providedIn: 'root' })
 export class RoomService {
     constructor(private http: HttpClient) { }
 
+    //api service to get all rooms
     getAll(): Observable<Rooms[]> {
         return this.http.get<Rooms[]>(`https://api.jsnhotels.com/api/room/`);
     }
