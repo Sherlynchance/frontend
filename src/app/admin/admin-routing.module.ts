@@ -8,6 +8,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { RoomTypesComponent } from './room-types/room-types.component';
 import { FacilitiesComponent } from './facilities/facilities.component';
+import { AdminGuard } from '../_guards/admin.guard';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
 
   {
     path:'users',
-    component: UsersComponent
+    component: UsersComponent,
+    // canActivate:[AdminGuard]
+
   },
 
   {

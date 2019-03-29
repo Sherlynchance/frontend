@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 import { AlertService } from 'src/app/_services/alert.service';
 
 
-
 @Component({
   selector: 'app-hotels',
   templateUrl: './hotels.component.html',
@@ -41,6 +40,7 @@ export class HotelsComponent implements OnInit {
 
   get f() { return this.hotelForm.controls; }
 
+  // get a list of all hotels from the database on initialize
   ngOnInit() {
     this.HotelService.getAll()
       .subscribe(Hotels => {
@@ -58,7 +58,7 @@ export class HotelsComponent implements OnInit {
         hotel_image: ['']
       });
     }
-
+  // ON SUBMTI BUTTON CLICK
   onAddSubmit(){
     let files = this.imageFileRef.nativeElement.files;
 
@@ -71,33 +71,38 @@ export class HotelsComponent implements OnInit {
     this.submitted = true;
     this.loading = true;
 
+    // get hotel details into the form to update the hotel detail
     const params = this.hotelForm.getRawValue();
 
+    // params contains the detials of the hotel selected, update
     if (params.id) {
       delete params['hotel_image'];
       this.HotelService.updateHotel(params)
         .pipe(first())
           .subscribe(
             data => {
+              // alert the admin when the hotel has been successfully updated
               alert('Hotel updated');
-                // this.alertService.success('Registration successful', true);
-                this.router.navigate(['/admin/hotels']);
+              this.router.navigate(['/admin/hotels']);
             },
             error => {
-                this.alertService.error(error);
-                this.loading = false;
+              this.alertService.error(error);
+              this.loading = false;
             });
-    } else {
+    } 
+    // else, input the new date to register a new hotel
+    else {
       this.HotelService.createHotel(params, files)
         .pipe(first())
           .subscribe(
             data => {
-                // this.alertService.success('Registration successful', true);
-                this.router.navigate(['/admin/hotels']);
+              window.alert('Hotel Added')
+              // this.alertService.success('Registration successful', true);
+              this.router.navigate(['/admin/hotels']);
             },
             error => {
-                this.alertService.error(error);
-                this.loading = false;
+              this.alertService.error(error);
+              this.loading = false;
             });
     }
 

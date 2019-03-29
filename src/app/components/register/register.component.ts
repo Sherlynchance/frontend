@@ -29,16 +29,11 @@ export class RegisterComponent implements OnInit {
 
   }
 
+  // make sure all data is inputed by the user from the form and set validations
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      user_first_name: ['', Validators.required],
-      user_last_name: ['', Validators.required],
       user_username: ['', Validators.required],
       email: ['', Validators.required],
-      user_postal: ['', Validators.required],
-      user_address: ['', Validators.required],
-      user_phone_no:['', Validators.required],
-      user_city:['', Validators.required],
       user_roles: ['user', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
     })
@@ -47,26 +42,27 @@ export class RegisterComponent implements OnInit {
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
-      this.submitted = true;
+    this.submitted = true;
 
-      // stop here if form is invalid
-      if (this.registerForm.invalid) {
-          return;
-      }
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+        return;
+    }
 
-      this.loading = true;
-      this.userService.register(this.registerForm.value)
-        .pipe(first())
-          .subscribe(
-            data => {
-                this.alertService.success('Registration successful', true);
-                window.alert("Registration successfull")
-                this.router.navigate(['/login']);
-            },
-            error => {
-                this.alertService.error(error);
-                this.loading = false;
-            });
+    // alert the user if registration successfull, else show error
+    this.loading = true;
+    this.userService.register(this.registerForm.value)
+      .pipe(first())
+        .subscribe(
+          data => {
+            this.alertService.success('Registration successful', true);
+            window.alert("Registration successfull")
+            this.router.navigate(['/login']);
+          },
+          error => {
+            this.alertService.error(error);
+            this.loading = false;
+          });
   }
 
 }

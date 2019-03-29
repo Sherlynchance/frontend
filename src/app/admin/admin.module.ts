@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { UsersComponent } from './users/users.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { UserService } from '../_services';
@@ -12,7 +11,6 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { HotelService } from '../_services/hotel.service';
 import { AlertService } from '../_services/alert.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { RoomService } from '../_services/room.service';
 import { ReviewService } from '../_services/review.service';
@@ -26,7 +24,9 @@ import { FacilitiesComponent } from './facilities/facilities.component';
     UsersComponent, 
     ReviewsComponent, 
     HotelsComponent, 
-    NavbarComponent, RoomsComponent, RoomTypesComponent, FacilitiesComponent],
+    RoomsComponent, 
+    RoomTypesComponent, 
+    FacilitiesComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

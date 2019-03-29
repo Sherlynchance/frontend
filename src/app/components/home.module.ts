@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
-import { ContactComponent } from './contact/contact.component';
 
 import { HomeRoutingModule } from './home.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     HomeTemplateComponent,
-    ContactComponent,
     HotelListComponent,
     HotelDetailsComponent
   ],

@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-// import { AuthGuard } from './_guards';
-// import { Role } from './_models';
-
 
 const routes: Routes = [
   {
@@ -20,14 +17,6 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   }
-
-//    { 
-//     path: 'home', 
-//     component: HomeComponent, 
-//     canActivate: [AuthGuard], 
-//     data: { roles: [Role.Admin] } 
-// },
-
 
 ];
 

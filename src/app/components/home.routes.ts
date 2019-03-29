@@ -5,11 +5,12 @@ import { HomeTemplateComponent } from './home.template';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ContactComponent } from './contact/contact.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { AuthGuard } from '../_guards';
 
+
+// routes to direct to respective component
 const routes: Routes = [
     {
       path: '',
@@ -18,10 +19,6 @@ const routes: Routes = [
     {
       path: 'home', 
       component: HomeComponent
-    },
-    {
-      path: 'contact', 
-      component: ContactComponent
     },
 
     {

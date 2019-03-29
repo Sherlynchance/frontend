@@ -8,6 +8,7 @@ import { User } from '../_models';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
+    isAdmin: any;
 
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -19,7 +20,7 @@ export class AuthenticationService {
     }
 
     login(email: string, password: string) {
-        return this.http.post<any>(`https://api.jsnhotels.com/api/auth/login`, { email, password })
+        return this.http.post<any>(`http://localhost:8000/api/auth/login`, { email, password })
             .pipe(map(user => {
                 //login successfull if there's a JWT token in response
                 if (user && user.access_token) {
@@ -35,7 +36,7 @@ export class AuthenticationService {
     }
 
     logout() {
-         // remove user from local storage to log user out
+        // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
     }

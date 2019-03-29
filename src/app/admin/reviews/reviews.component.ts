@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewService } from 'src/app/_services/review.service';
 import { FormBuilder } from '@angular/forms';
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 import { AlertService } from 'src/app/_services/alert.service';
 
@@ -20,6 +19,7 @@ export class ReviewsComponent implements OnInit {
     private router: Router,
     private alertService: AlertService) { }
 
+  // display all hotels in a table on initialize
   ngOnInit() {
     this.reviewService.getAll()
       .subscribe(reviews => {
@@ -27,6 +27,7 @@ export class ReviewsComponent implements OnInit {
       })
   }
 
+  // delete review 
   deleteReview(id){
     this.reviewService.deleteReview(id)
       .subscribe((review) => {

@@ -1,29 +1,3 @@
-<!-- <div id="page4">
-  <div class="main">
-    <div class="box">
-        <article id="content">
-          <div class="box1">
-            <div class="wrapper">
-              <div class="col2 pad">
-                <h2><img src="images/title_marker1.jpg" alt="">Best Propositions of This Month</h2>
-                <div class="wrapper line1">
-                  <div class="col3">
-                    <figure class="pad_bot3"><img src="../../../assets/img/sampleroom.jpg" alt=""></figure>
-                    <p class="pad_bot1"><strong class="color3">Lorem ipsum dolor amet consectetur</strong></p>
-                    <p>Adipisicing elito eiusmod tempor incididunt ut labore dolore magna.</p>
-                    <ul class="list2">
-                        <li><span>2</span>Rooms</li>
-                      <li><span>4</span>Beds</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-    </div>
-  </div>
-</div> -->
 <body>
 
   <div class="row">
@@ -32,9 +6,6 @@
         <div class="card">
           <div class="row py-4">
             <div class="col-md-4">
-              <!-- <img src="public/image/public/uploads/pictures/{{Hotel.hotel_image}}" class="w-100"> -->
-              <!-- <img [src] = 'public/image/public/uploads/pictures/${Hotel.hotel_image}'> -->
-              <!-- <img src="{{Hotel.hotel_image}}"> -->
               <img src="{{Hotels.image}}" class="w-100">
             </div>
             <div class="col-md-8 px-3">
@@ -54,21 +25,18 @@
   </div>
 
   <div class="card" style="width: 18rem; margin-left: 40px;margin-right: 40px; margin-top: 40px;display:inline-block" *ngFor="let room of Hotels.rooms">
-      <img class="card-img-top" src="https://api.jsnhotels.com/{{room.room_image}}" alt="Card image cap">
+      <img class="card-img-top" src="http://localhost:8000/{{room.room_image}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">
-          {{ room.type.room_name }}
+          {{room.type.room_name}}
         </h5>
         <p class="card-text">
-          {{ room.room_description }}
+          {{room.room_description}}
         </p>
-        <label>{{ room.type.room_price | currency:'IDR.  ' }}</label>
+        <label>{{room.type.room_price | currency:'IDR.  '}}</label>
       </div>
     </div>
-
 </body>
-
-
 
 
 
@@ -78,13 +46,8 @@
 		<h3>Leave Review</h3>
 	</div>
     
-
-  
-  
-  
-    
   <!-- <div *ngIf="!show" class="row"> -->
-    <div class="col-md-6">
+    <div class="col-md-6" style="height: 50vh">
       <div class="widget-area no-padding blank">
         <div class="status-upload">
             <form [formGroup]="reviewForm" (submit)="onSubmit()" class="form">
@@ -105,6 +68,4 @@
         </div>
       </div>
     </div>
-  <!-- </div> -->
-  
 </div>

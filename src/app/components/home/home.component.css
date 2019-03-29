@@ -28,17 +28,10 @@ div#carousel-example-generic {
 }
 
 div.form-group {
-	/* background: rgb(0,0,0,0.7);
-	border: 2px solid #414141;
-	border-radius: 5px;
-	padding-top: 10px;
-	padding-bottom: 10px; */
 	background: rgb(0,0,0,0.7);
 	border-radius: 15px 15px 15px 15px;
   padding: 10px;
   text-align: center;
-  /* background-color: rgba(237, 237, 237, 0.5); */
-  /* background-color: hsla(0, 0%, 93%, 0.5); */
   width: 400px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position:absolute;
@@ -55,7 +48,6 @@ div.form-group {
   left: 25%;
   z-index: 20;
   color: white;
-	/* background-color: rgba(0, 0, 0, 0.19); */
 }
 
 .searchbox{
