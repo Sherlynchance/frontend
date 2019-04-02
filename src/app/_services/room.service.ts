@@ -16,14 +16,14 @@ export class RoomService {
         return this.http.get<Rooms>(`http://localhost:8000/api/room/${id}`);
     }
 
-     createRoom(rooms: Rooms, files: any){
-         const formData = new FormData();
-         for (const key in rooms) {
-             formData.append(key, rooms[key]);
-         }
-         formData.append('room_image', files);
+    createRoom(rooms: Rooms, files: any){
+        const formData = new FormData();
+        for (const key in rooms) {
+            formData.append(key, rooms[key]);
+        }
+        formData.append('room_image', files);
 
-         return this.http.post(`http://localhost:8000/api/room`, formData);
+        return this.http.post(`http://localhost:8000/api/room`, formData);
     }
     //  updateRoom(rooms: Rooms){
     //      return this.http.put<Rooms>('https://localhost:8000/api/room/', rooms.id);

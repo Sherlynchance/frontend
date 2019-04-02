@@ -5,6 +5,7 @@ import { AuthenticationService } from '../../_services';
 import { AlertService } from 'src/app/_services/alert.service';
 import { User, Role } from 'src/app/_models';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,10 +38,19 @@ export class LoginComponent implements OnInit {
         this.loginForm = this.formBuilder.group({
             email: ['', Validators.required],
             password: ['', Validators.required]
+            
         });
 
         //get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
+        // if(this.currentUser)
+
+        // if (this.currentUser.id == 1){
+        //     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/admin';
+        // }
+        // else{
+        //     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
+        // }
     }
 
     // convenience getter for easy access to form fields
@@ -53,6 +63,8 @@ export class LoginComponent implements OnInit {
         if (this.loginForm.invalid) {
             return;
         }
+
+        
         
         this.loading = true;
         this.authenticationService.login(this.f.email.value, this.f.password.value)
@@ -63,9 +75,21 @@ export class LoginComponent implements OnInit {
                 this.alertService.error(error);
                 this.loading = false;
             });
+
+        
     }
+    
+    
 
     get isAdmin(){
         return this.currentUser && this.currentUser.user_roles == Role.Admin;
     }
+
+    // isAdmin(){
+        
+    //     if(this.currentUser.user_roles == 'Admin'){
+    //         this.router.navigate(['/admin']);
+    //     }
+        
+    // }
 }

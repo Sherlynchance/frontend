@@ -11,14 +11,17 @@ import { FacilitiesComponent } from './facilities/facilities.component';
 import { AdminGuard } from '../_guards/admin.guard';
 import { AuthGuard } from '../_guards';
 import { Role } from '../_models/role';
+import { User } from '../_models/user';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
+   
     // canActivate: [AuthGuard],
-    // data: {user_roles:[Role.Admin]}
+    // data: {user_roles:'admin'}
+    // data: {id:[1]}
   },
 
   {

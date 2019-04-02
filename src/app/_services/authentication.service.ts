@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../_models';
+import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
     isAdmin: any;
+    router: Router;
 
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -22,6 +24,7 @@ export class AuthenticationService {
     login(email: string, password: string) {
         return this.http.post<any>(`http://localhost:8000/api/auth/login`, { email, password })
             .pipe(map(user => {
+
                 //login successfull if there's a JWT token in response
                 if (user && user.access_token) {
                     //store user details and JWT token in local storage to keep user logged in even when the page refreshes
