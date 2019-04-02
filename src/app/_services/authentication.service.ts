@@ -22,7 +22,7 @@ export class AuthenticationService {
     }
 
     login(email: string, password: string) {
-        return this.http.post<any>(`http://localhost:8000/api/auth/login`, { email, password })
+        return this.http.post<any>(`https://api.jsnhotels.com/api/auth/login`, { email, password })
             .pipe(map(user => {
 
                 //login successfull if there's a JWT token in response

@@ -9,11 +9,11 @@ export class RoomService {
 
     // api service to get all rooms
     getAll(): Observable<Rooms[]> {
-        return this.http.get<Rooms[]>(`http://localhost:8000/api/room/`);
+        return this.http.get<Rooms[]>(`https://api.jsnhotels.com/api/room/`);
     }
 
     getById(id: number) {
-        return this.http.get<Rooms>(`http://localhost:8000/api/room/${id}`);
+        return this.http.get<Rooms>(`https://api.jsnhotels.com/api/room/${id}`);
     }
 
     createRoom(rooms: Rooms, files: any){
@@ -23,21 +23,21 @@ export class RoomService {
         }
         formData.append('room_image', files);
 
-        return this.http.post(`http://localhost:8000/api/room`, formData);
+        return this.http.post(`https://api.jsnhotels.com/api/room`, formData);
     }
     //  updateRoom(rooms: Rooms){
     //      return this.http.put<Rooms>('https://localhost:8000/api/room/', rooms.id);
     // }
 
     updateRoom(rooms: Rooms){
-        return this.http.put<Rooms>(`http://localhost:8000/api/room/${rooms.id}`, rooms);
+        return this.http.put<Rooms>(`https://api.jsnhotels.com/api/room/${rooms.id}`, rooms);
     }
 
     deleteRoom(id: number){
-        return this.http.delete<Rooms>(`http://localhost:8000/api/room/${id}`);
+        return this.http.delete<Rooms>(`https://api.jsnhotels.com/api/room/${id}`);
     }
 
     getByName(name: string){
-         return this.http.get<Rooms>(`http://localhost:8000/room/${name}`);
+         return this.http.get<Rooms>(`https://api.jsnhotels.com/room/${name}`);
     }
 }

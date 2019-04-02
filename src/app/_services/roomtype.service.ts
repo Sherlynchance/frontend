@@ -9,11 +9,11 @@ export class RoomTypeService {
 
   // api service to get all rooms
   getAll(): Observable<RoomTypes[]> {
-    return this.http.get<RoomTypes[]>(`http://localhost:8000/api/roomtype/`);
+    return this.http.get<RoomTypes[]>(`https://api.jsnhotels.com/api/roomtype/`);
   }
 
   getById(id: number) {
-    return this.http.get<RoomTypes>(`http://localhost:8000/api/roomtype/${id}`);
+    return this.http.get<RoomTypes>(`https://api.jsnhotels.com/api/roomtype/${id}`);
     
   }
 
@@ -23,18 +23,18 @@ export class RoomTypeService {
       formData.append(key, roomtype[key]);
     }
 
-    return this.http.post(`http://localhost:8000/api/roomtype`, formData);
+    return this.http.post(`https://api.jsnhotels.com/api/roomtype`, formData);
   }
 
   updateRoomType(roomtype: RoomTypes) {
-    return this.http.put<RoomTypes>(`http://localhost:8000/api/roomtype/${roomtype.id}`, roomtype);
+    return this.http.put<RoomTypes>(`https://api.jsnhotels.com/api/roomtype/${roomtype.id}`, roomtype);
   }
 
   deleteRoomType(id: number) {
-    return this.http.delete<RoomTypes>(`http://localhost:8000/api/roomtype/${id}`);
+    return this.http.delete<RoomTypes>(`https://api.jsnhotels.com/api/roomtype/${id}`);
   }
 
   getByName(name: string) {
-    return this.http.get<RoomTypes>(`http://localhost:8000/roomtype/${name}`);
+    return this.http.get<RoomTypes>(`https://api.jsnhotels.com/roomtype/${name}`);
   }
 }

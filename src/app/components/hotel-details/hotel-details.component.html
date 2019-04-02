@@ -25,7 +25,7 @@
   </div>
 
   <div class="card" style="width: 18rem; margin-left: 40px;margin-right: 40px; margin-top: 40px;display:inline-block" *ngFor="let room of Hotels.rooms">
-      <img class="card-img-top" src="http://localhost:8000/{{room.room_image}}" alt="Card image cap">
+      <img class="card-img-top" src="https://api.jsnhotels.com/{{room.room_image}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">
           {{room.type.room_name}}

@@ -9,7 +9,7 @@ export class ReviewService {
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<Review[]> {
-        return this.http.get<Review[]>(`http://localhost:8000/api/review/`);
+        return this.http.get<Review[]>(`https://api.jsnhotels.com/api/review/`);
     }
 
     createReview(review: Review){
@@ -18,11 +18,11 @@ export class ReviewService {
                 'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('currentUser')).access_token
             }
         }
-        return this.http.post('http://localhost:8000/api/review', review, options);
+        return this.http.post('https://api.jsnhotels.com/api/review', review, options);
     }
 
     deleteReview(id: number){
-        return this.http.delete<Review>(`http://localhost:8000/api/review/${id}`)
+        return this.http.delete<Review>(`https://api.jsnhotels.com/api/review/${id}`)
     }
     
 

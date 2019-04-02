@@ -11,12 +11,12 @@ export class HotelService {
 
     //  api service to get all users
     getAll(): Observable<Hotels[]> {
-        return this.http.get<Hotels[]>(`http://localhost:8000/api/hotel/`);
+        return this.http.get<Hotels[]>(`https://api.jsnhotels.com/api/hotel/`);
     }
 
     // api service to get user details by id
     getById(id: number) {
-        return this.http.get<Hotels>(`http://localhost:8000/api/hotel/${id}`);
+        return this.http.get<Hotels>(`https://api.jsnhotels.com/api/hotel/${id}`);
     }
 
     // api service to register new hotel into the database
@@ -27,16 +27,16 @@ export class HotelService {
         }
         formData.append('hotel_image', files);
 
-        return this.http.post(`http://localhost:8000/api/hotel`, formData);
+        return this.http.post(`https://api.jsnhotels.com/api/hotel`, formData);
     }
     
     // api service to update existing hotel details
     updateHotel(hotels: Hotels){
-        return this.http.put<Hotels>(`http://localhost:8000/api/hotel/${hotels.id}`, hotels);
+        return this.http.put<Hotels>(`https://api.jsnhotels.com/api/hotel/${hotels.id}`, hotels);
     }
 
     // api service to delete existing hotel from the database
     deleteHotel(id: number){
-        return this.http.delete<Hotels>(`http://localhost:8000/api/hotel/${id}`)
+        return this.http.delete<Hotels>(`https://api.jsnhotels.com/api/hotel/${id}`)
     }
 }

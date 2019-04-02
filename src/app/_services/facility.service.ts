@@ -9,11 +9,11 @@ export class FacilityService {
 
   // api service to get all rooms
   getAll(): Observable<Facility[]> {
-    return this.http.get<Facility[]>(`http://localhost:8000/api/facility/`);
+    return this.http.get<Facility[]>(`https://api.jsnhotels.com/api/facility/`);
   }
 
   getById(id: number) {
-    return this.http.get<Facility>(`http://localhost:8000/api/facility/${id}`);
+    return this.http.get<Facility>(`https://api.jsnhotels.com/api/facility/${id}`);
   }
 
   createFacility(facility: Facility) {
@@ -21,18 +21,18 @@ export class FacilityService {
     for (const key in facility) {
       formData.append(key, facility[key]);
     }
-    return this.http.post(`http://localhost:8000/api/facility`, formData);
+    return this.http.post(`https://api.jsnhotels.com/api/facility`, formData);
   }
 
   updateFacility(facility: Facility) {
-    return this.http.put<Facility>(`http://localhost:8000/api/facility/${facility.id}`, facility);
+    return this.http.put<Facility>(`https://api.jsnhotels.com/api/facility/${facility.id}`, facility);
   }
 
   deleteFacility(id: number) {
-    return this.http.delete<Facility>(`http://localhost:8000/api/facility/${id}`);
+    return this.http.delete<Facility>(`https://api.jsnhotels.com/api/facility/${id}`);
   }
 
   getByName(name: string) {
-    return this.http.get<Facility>(`http://localhost:8000/facility/${name}`);
+    return this.http.get<Facility>(`https://api.jsnhotels.com/facility/${name}`);
   }
 }
