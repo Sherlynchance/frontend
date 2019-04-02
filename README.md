@@ -1,6 +1,6 @@
 # JSNHotels.com
 
-JSNHotels is a platform that provides you with hotel details form all over the world to save yout time and choice of stay.
+JSNHotels is a platform that provides you with hotel details fromm Indonesia to save your time and choice of stay.
 <br>
 This project was generated with Angular CLI version 7.0.3.
 
