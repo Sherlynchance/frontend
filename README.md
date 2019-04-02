@@ -42,6 +42,11 @@ Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app wil
 - Click 'read more' to see more details about that hotel
 - The details of that hotel including the rooms and their prices will then be displayed for you
 
+For example:
+- Search "Jakarta" in the searchbox
+- Click on "Angelica Hotel"
+- The details of "Angelica Hotel" will then be displayed
+
 The admin can manage all databases. To login as the admin, go to the login page and choose admin tab. Then login with the following credentials
 <br>
 ```
