@@ -65,8 +65,7 @@ export class LoginComponent implements OnInit {
             });
     }
 
-    // get isAdmin(){
-    //     return this.currentUser && this.currentUser.user_roles == Role.Admin;
-    
-    //   }
+    get isAdmin(){
+        return this.currentUser && this.currentUser.user_roles == Role.Admin;
+    }
 }

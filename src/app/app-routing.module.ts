@@ -5,6 +5,7 @@ import { Routes, RouterModule, CanActivate, ActivatedRouteSnapshot, RouterStateS
 const routes: Routes = [
   {
     path: '',
+    
     loadChildren: './components/home.module#HomeModule'
   },
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 

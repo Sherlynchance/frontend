@@ -9,12 +9,16 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { RoomTypesComponent } from './room-types/room-types.component';
 import { FacilitiesComponent } from './facilities/facilities.component';
 import { AdminGuard } from '../_guards/admin.guard';
+import { AuthGuard } from '../_guards';
+import { Role } from '../_models/role';
 
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent
+    // canActivate: [AuthGuard],
+    // data: {user_roles:[Role.Admin]}
   },
 
   {

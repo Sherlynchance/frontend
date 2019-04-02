@@ -5,20 +5,8 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    
-}
-
-body{
-    background-color: #ddd;
-}
-
-.container{
-    position: relative;
-    top: 50px;
-    padding-bottom: 50px;
-    overflow: hidden;
 }
 
 td img{
-    max-width: 100%;
+    max-width: 30%;
 }

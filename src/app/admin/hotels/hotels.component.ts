@@ -117,8 +117,10 @@ export class HotelsComponent implements OnInit {
   deleteHotel(id){
     this.HotelService.deleteHotel(id)
       .subscribe((hotel: Hotels) => {
+        window.alert("Hotel deleted");
         console.log("Hotel deleted, ", hotel);
       })
+
   }
 
   
