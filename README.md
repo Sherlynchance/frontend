@@ -61,7 +61,7 @@ There are 6 tables in total for the admin to manage(CRUD):
 - Facilities - List of Facilities of each hotel
 - Reviews - List reviews left by users
 
-Check Out JSNHotels.com
+Check Out
 <a href="https://jsnhotels.com/home">JSNHotels.com</a>
 
 ## Built With
